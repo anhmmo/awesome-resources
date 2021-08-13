@@ -1,10 +1,10 @@
 // Initialize dotenv
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`, // or '.env'
-});
+})
 
 // And then you can use the config in gatsby-config.js
-const config = require("gatsby-plugin-config");
+const config = require("gatsby-plugin-config")
 
 module.exports = {
   siteMetadata: {
@@ -16,6 +16,17 @@ module.exports = {
     author: `@anhmmo`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Lato\:300,400,700,800,900`,
+          `Montserrat\:300,400,500,600,800,900`,
+          `Lobster\:400`,
+        ],
+        display: "swap",
+      },
+    },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-styled-components",
     {
@@ -39,4 +50,4 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
   ],
-};
+}
