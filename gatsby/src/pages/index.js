@@ -6,7 +6,7 @@ const IndexPage = () => {
     <Layout>
       <section className="header">
         <div className="wrapper">
-          <h1>Design resources for developers</h1>
+          <h1>Awere - Design resources for developers</h1>
           <h2>
             Curated list of <span className="hightlight">design</span> and{" "}
             <span className="hightlight">UI</span> resources from stock photos,
@@ -80,6 +80,21 @@ const IndexPage = () => {
           <div className="category-list flex">
             <div className="flex-item three category-item">
               <div className="single-item">
+                <img
+                  className="close-btn"
+                  src="https://i.imgur.com/4nDYTIT.png"
+                  alt=""
+                />
+
+                <div
+                  className="preview-window"
+                  title="click to view bigger image"
+                >
+                  <a target="_blank" href="https://i.imgur.com/k8i8X9v.png">
+                    {" "}
+                    <img src="https://i.imgur.com/k8i8X9v.png" alt="" />
+                  </a>
+                </div>
                 <div className="item-header">
                   <div className="image-box">
                     <img
@@ -91,8 +106,9 @@ const IndexPage = () => {
                     Integration & Application Network Image Library
                   </p>
                   <a href="#">
-                    <img src="https://i.imgur.com/C2z8R3L.png" alt="test" />
-                    {/*when hover https://i.imgur.com/zwIWnFm.png*/}
+                    {/*<div className="header-link"></div>*/}
+
+                    <div className="header-link"></div>
                   </a>
                 </div>
                 <div className="item-body">
@@ -101,18 +117,25 @@ const IndexPage = () => {
                     An online social networking community and creative research
                     platform.
                   </p>{" "}
+                  <ul className="list-tag">
+                    <a href="#">
+                      {" "}
+                      <li className="green">free</li>
+                    </a>
+                    <a href="#">
+                      <li>included paid services</li>
+                    </a>
+                  </ul>
                 </div>
                 <div className="item-footer">
                   <div className="item-preview-link">
                     <div className="item-preview-image">
-                      <img src="https://i.imgur.com/bnfsN7M.png" alt="test" />
+                      <img src="https://i.imgur.com/yrvSIVk.png" alt="test" />
                     </div>
-                    <a className="preview-link" href="#">
-                      Preview
-                    </a>
+                    <div className="preview-link">preview</div>
                   </div>
                   <a className="bookmark-link" href="#">
-                    Bookmark
+                    like
                   </a>
                 </div>
               </div>
@@ -128,8 +151,7 @@ const IndexPage = () => {
                   </div>
                   <p>Freepik</p>
                   <a href="#">
-                    <img src="https://i.imgur.com/C2z8R3L.png" alt="test" />
-                    {/*when hover https://i.imgur.com/zwIWnFm.png*/}
+                    <div className="header-link"></div>
                   </a>
                 </div>
                 <div className="item-body">
@@ -138,19 +160,26 @@ const IndexPage = () => {
                     Fully coded HTML templates to help you easily build your
                     startup landing page without hassles.
                   </p>{" "}
+                  <ul className="list-tag">
+                    <a href="#">
+                      {" "}
+                      <li className="green">free</li>
+                    </a>
+                    <a href="#">
+                      <li className="red">included paid services</li>
+                    </a>
+                  </ul>
                 </div>
                 <div className="item-footer">
                   <div className="item-preview-link">
                     <div className="item-preview-image">
-                      <img src="https://i.imgur.com/bnfsN7M.png" alt="test" />
+                      <img src="https://i.imgur.com/yrvSIVk.png" alt="test" />
                     </div>
-                    <a className="preview-link" href="#">
-                      Preview
-                    </a>
+                    <div className="preview-link">preview</div>
                   </div>
 
                   <a className="bookmark-link" href="#">
-                    Bookmark
+                    like
                   </a>
                 </div>
               </div>
@@ -166,8 +195,7 @@ const IndexPage = () => {
                   </div>
                   <p>Illlustrations</p>
                   <a href="#">
-                    <img src="https://i.imgur.com/C2z8R3L.png" alt="test" />
-                    {/*when hover https://i.imgur.com/zwIWnFm.png*/}
+                    <div className="header-link"></div>
                   </a>
                 </div>
                 <div className="item-body">
@@ -183,18 +211,25 @@ const IndexPage = () => {
                     website design standout, right from your browser quickly &
                     for free.
                   </p>{" "}
+                  <ul className="list-tag">
+                    <a href="#">
+                      {" "}
+                      <li className="green">free</li>
+                    </a>
+                    <a href="#">
+                      <li className="red">included paid services</li>
+                    </a>
+                  </ul>
                 </div>
                 <div className="item-footer">
                   <div className="item-preview-link">
                     <div className="item-preview-image">
-                      <img src="https://i.imgur.com/bnfsN7M.png" alt="test" />
+                      <img src="https://i.imgur.com/yrvSIVk.png" alt="test" />
                     </div>
-                    <a className="preview-link" href="#">
-                      Preview
-                    </a>
+                    <div className="preview-link">preview</div>
                   </div>
                   <a className="bookmark-link" href="#">
-                    Bookmark
+                    like
                   </a>
                 </div>
               </div>
@@ -210,25 +245,31 @@ const IndexPage = () => {
                   </div>
                   <p>Smart Mockups</p>
                   <a href="#">
-                    <img src="https://i.imgur.com/C2z8R3L.png" alt="test" />
-                    {/*when hover https://i.imgur.com/zwIWnFm.png*/}
+                    <div className="header-link"></div>
                   </a>
                 </div>
                 <div className="item-body">
                   {" "}
                   <p>Create stunning product mockups (free & premium)</p>{" "}
+                  <ul className="list-tag">
+                    <a href="#">
+                      {" "}
+                      <li className="green">free</li>
+                    </a>
+                    <a href="#">
+                      <li className="red">included paid services</li>
+                    </a>
+                  </ul>
                 </div>
                 <div className="item-footer">
                   <div className="item-preview-link">
                     <div className="item-preview-image">
-                      <img src="https://i.imgur.com/bnfsN7M.png" alt="test" />
+                      <img src="https://i.imgur.com/yrvSIVk.png" alt="test" />
                     </div>
-                    <a className="preview-link" href="#">
-                      Preview
-                    </a>
+                    <div className="preview-link">preview</div>
                   </div>
                   <a className="bookmark-link" href="#">
-                    Bookmark
+                    like
                   </a>
                 </div>
               </div>
@@ -244,8 +285,7 @@ const IndexPage = () => {
                   </div>
                   <p>Screenshot.rocks</p>
                   <a href="#">
-                    <img src="https://i.imgur.com/C2z8R3L.png" alt="test" />
-                    {/*when hover https://i.imgur.com/zwIWnFm.png*/}
+                    <div className="header-link"></div>
                   </a>
                 </div>
                 <div className="item-body">
@@ -253,18 +293,25 @@ const IndexPage = () => {
                   <p>
                     Create beautiful browser & mobile mockups in seconds
                   </p>{" "}
+                  <ul className="list-tag">
+                    <a href="#">
+                      {" "}
+                      <li className="green">free</li>
+                    </a>
+                    <a href="#">
+                      <li className="red">included paid services</li>
+                    </a>
+                  </ul>
                 </div>
                 <div className="item-footer">
                   <div className="item-preview-link">
                     <div className="item-preview-image">
-                      <img src="https://i.imgur.com/bnfsN7M.png" alt="test" />
+                      <img src="https://i.imgur.com/yrvSIVk.png" alt="test" />
                     </div>
-                    <a className="preview-link" href="#">
-                      Preview
-                    </a>
+                    <div className="preview-link">preview</div>
                   </div>
                   <a className="bookmark-link" href="#">
-                    Bookmark
+                    like
                   </a>
                 </div>
               </div>
@@ -280,25 +327,31 @@ const IndexPage = () => {
                   </div>
                   <p>HTML5Up</p>
                   <a href="#">
-                    <img src="https://i.imgur.com/C2z8R3L.png" alt="test" />
-                    {/*when hover https://i.imgur.com/zwIWnFm.png*/}
+                    <div className="header-link"></div>
                   </a>
                 </div>
                 <div className="item-body">
                   {" "}
                   <p>Very modern, unique responsive HTML5/CSS3 themes</p>{" "}
+                  <ul className="list-tag">
+                    <a href="#">
+                      {" "}
+                      <li className="green">free</li>
+                    </a>
+                    <a href="#">
+                      <li className="red">included paid services</li>
+                    </a>
+                  </ul>
                 </div>
                 <div className="item-footer">
                   <div className="item-preview-link">
                     <div className="item-preview-image">
-                      <img src="https://i.imgur.com/bnfsN7M.png" alt="test" />
+                      <img src="https://i.imgur.com/yrvSIVk.png" alt="test" />
                     </div>
-                    <a className="preview-link" href="#">
-                      Preview
-                    </a>
+                    <div className="preview-link">preview</div>
                   </div>
                   <a className="bookmark-link" href="#">
-                    Bookmark
+                    like
                   </a>
                 </div>
               </div>
