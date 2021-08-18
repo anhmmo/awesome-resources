@@ -398,17 +398,30 @@ const GlobalStyles = createGlobalStyle`
           box-shadow: 0 5px 23px -7px rgb(163 185 197 / 77%);
           transition: all 200ms;
           &:hover {
-            
             transform: translateY(-4px);
           }
 
+          &::after {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: -4px;
+            right: 0;
+            height: 8px;
+            width: 22px;
+          }
+
           .close-btn {
+            display: none;
             position: absolute;
             top: -22px;
             right: 0;
             width: 18px;
             height: 18px;
             cursor: pointer;
+            &:hover {
+
+            }
           }
 
           .info-btn {
@@ -419,8 +432,8 @@ const GlobalStyles = createGlobalStyle`
             height: 16px;
             cursor: pointer;
           }
-
         .preview-window {
+          display: none;
           width: inherit;
           position: absolute;
           top: 0;
@@ -428,6 +441,8 @@ const GlobalStyles = createGlobalStyle`
           z-index: 1000;
           overflow-y: scroll;
           height: 100%;
+
+          
           /* Scrollbar Styles */
           &::-webkit-scrollbar {
             width: 5px;
@@ -573,6 +588,7 @@ const GlobalStyles = createGlobalStyle`
               color: #87969d;
               transition: all 300ms;
               cursor: pointer;
+              font-size: 1.4rem;
               &:hover {
                 color: var(--black);
                 font-weight: bold;
