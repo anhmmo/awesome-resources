@@ -399,7 +399,10 @@ const GlobalStyles = createGlobalStyle`
           transition: all 200ms;
           &:hover {
             transform: translateY(-4px);
+            text-shadow: 0 0 6px rgb(0 0 0 / 30%);
           }
+
+        
 
           &::after {
             content: " ";
