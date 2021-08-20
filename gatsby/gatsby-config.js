@@ -1,53 +1,24 @@
-// Initialize dotenv
 require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`, // or '.env'
+  path: `.env.${process.env.NODE_ENV}`,
 })
 
-// And then you can use the config in gatsby-config.js
-const config = require("gatsby-plugin-config")
-
-module.exports = {
+export default {
   siteMetadata: {
-    title: `Awesome sources`,
-    siteUrl: "https://awesome-souces.netlify.app",
-    description:
-      "Curated list of design and UI resources from stock photos, web templates, CSS frameworks, UI libraries, tools and much more. Base on https://github.com/bradtraversy/design-resources-for-developers",
-    github: "@anhmmo",
-    author: `@anhmmo`,
+    title: `Awere - creative tools for developers`,
+    siteUrl: "http://localhost:8000/",
+    description: "A collection of creative tools for developers",
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `Lato\:300,400,700,800,900`,
-          `Montserrat\:300,400,500,600,800,900`,
-          `Lobster\:400`,
-        ],
-        display: "swap",
-      },
-    },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-styled-components",
     {
-      // this is the name of the plugin you are adding
       resolve: "gatsby-source-sanity",
       options: {
-        projectId: "0jfvvkkd",
+        projectId: "94zd6ebr",
         dataset: "production",
         watchMode: true,
-        token: config.SANITY_TOKEN,
+        token: process.env.API_TOKEN,
       },
     },
-    `gatsby-plugin-image`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/assets/images`,
-      },
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
   ],
 }
