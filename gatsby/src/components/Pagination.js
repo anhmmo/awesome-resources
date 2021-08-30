@@ -7,29 +7,32 @@ const PaginationStyles = styled.div`
   align-content: center;
   align-items: center;
   justify-items: center;
-  border: 1px solid var(--grey);
+  justify-content: center;
   margin: 2rem 0;
-  border-radius: 5px;
   text-align: center;
+  flex-wrap: wrap;
   & > * {
-    padding: 1rem;
-    flex: 1;
-    border-right: 1px solid var(--grey);
+    font-size: 1.4rem;
+    transition: all 200ms;
+    font-weight: bold;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    background-color: white;
+    margin: 3px 6px;
+    border: 1px solid #0000001a;
+    border-radius: 4px;
     text-decoration: none;
     &[aria-current],
+    &:hover,
     &.current {
-      color: var(--red);
+      color: #ffffff;
+      background-color: var(--black);
     }
     &[disabled] {
       pointer-events: none;
-      color: var(--grey);
+      color: #989898;
     }
-  }
-  @media (max-width: 800px) {
-    .word {
-      display: none;
-    }
-    font-size: 1.4rem;
   }
 `
 
@@ -51,13 +54,15 @@ export default function Pagination({
       <Link
         title="Prev Page"
         disabled={!hasPrevPage}
-        to={`${base}/${prevPage}`}
+        to={`${base}/${prevPage}#resource`}
       >
-        ← <span className="word">Prev</span>
+        ←
       </Link>
       {Array.from({ length: totalPages }).map((_, i) => (
         <Link
-          className={currentPage === 1 && i === 0 ? "current" : ""}
+          className={
+            currentPage === 1 && i === 0 ? "current has-page" : "has-page"
+          }
           to={`${base}/${i > 0 ? i + 1 : ""}`}
           key={`page${i}`}
         >
@@ -67,9 +72,9 @@ export default function Pagination({
       <Link
         title="Next Page"
         disabled={!hasNextPage}
-        to={`${base}/${nextPage}`}
+        to={`${base}/${nextPage}#resource`}
       >
-        <span className="word">Next</span> →
+        →
       </Link>
     </PaginationStyles>
   )
