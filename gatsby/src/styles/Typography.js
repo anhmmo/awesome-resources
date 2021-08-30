@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components"
 import font from "../assets/fonts/Varela-Regular.woff"
 
 const Typography = createGlobalStyle`
+
   @font-face {
     font-family: Varela;
     src: url(${font});
