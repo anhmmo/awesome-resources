@@ -287,82 +287,113 @@ const GlobalStyles = createGlobalStyle`
       display: block;
       
       text-align: center;
-      
-      li {
-        display: inline-block;
-        font-family: Montserrat, sans-serif;
-        font-weight: 600;
-        border-radius: 12rem;
-        font-size: 1.4rem;
-        margin: 6px;
-        padding: 6px 14px;
-        color: #87969d;
-        background-color: #f4f8fb;
-        cursor: pointer;
-        -webkit-transition: all 400ms;
-        -o-transition: all 400ms;
-        transition: all 400ms;
-        &.green {
-          &:hover {
-            color: #71c3aa;
-            background-color: #e2faf2;
-          }
-         
-        }
 
-        &.yellow {
-          
+      a {
+        &[aria-current="page"] li {
+          color: #000000;
+          background-color: #ffb400;
+
           &:hover {
-            color: #968047;
-            background-color: #fcf2da;
+            color: #000000;
+            background-color: #ffb400;
           }
         }
 
-        &.lavender {
-         
-          &:hover {
-            color: #784d79;
-            background-color: #fce9fd;
-          }
-        }
-
-        &.aqua {
-          
-          &:hover {
-            color: #1b6e66;
-            background-color:#e6fbf9;
-          }
-        }
-
-        &.pea {
-          
-          &:hover {
-            color: #3e6c47;
-            background-color:#dbeede;
-          }
-        }
-
-        &:hover {
-          background-color: var(--white);
-          color: var(--black);
-          -webkit-box-shadow: rgb(46 41 51 / 8%) 0px 4px 16px, rgb(71 63 79 / 16%) 0px 8px 24px;
-          box-shadow: rgb(46 41 51 / 8%) 0px 4px 16px, rgb(71 63 79 / 16%) 0px 8px 24px;
-        }
-
-        span {
+        li {
           display: inline-block;
-          margin-left: 6px;
-          padding: 2px 6px;
-          background-color: var(--white);
+          font-family: Montserrat, sans-serif;
+          font-weight: 600;
           border-radius: 12rem;
+          font-size: 1.4rem;
+          margin: 6px;
+          padding: 6px 14px;
+          color: #87969d;
+          background-color: #f4f8fb;
+          cursor: pointer;
+          -webkit-transition: all 400ms;
+          -o-transition: all 400ms;
+          transition: all 400ms;
+
+          &.active {
+            color: #000000;
+            background-color: #ffb400;
+            
+            &:hover {
+              color: #000000;
+              background-color: #ffb400;
+            }
+          }
+
+          &.green {
+            &:hover {
+              color: #71c3aa;
+              background-color: #e2faf2;
+            }
+          
+          }
+
+          &.yellow {
+            
+            &:hover {
+              color: #968047;
+              background-color: #fcf2da;
+            }
+          }
+
+          &.lavender {
+          
+            &:hover {
+              color: #784d79;
+              background-color: #fce9fd;
+            }
+          }
+
+          &.aqua {
+            
+            &:hover {
+              color: #1b6e66;
+              background-color:#e6fbf9;
+            }
+          }
+
+          &.pea {
+            
+            &:hover {
+              color: #3e6c47;
+              background-color:#dbeede;
+            }
+          }
+
+          &:hover {
+            background-color: var(--black);
+            color: var(--white);
+            -webkit-box-shadow: rgb(46 41 51 / 8%) 0px 4px 16px, rgb(71 63 79 / 16%) 0px 8px 24px;
+            box-shadow: rgb(46 41 51 / 8%) 0px 4px 16px, rgb(71 63 79 / 16%) 0px 8px 24px;
+          }
+
+          &:hover span {
+            transform: scale(1.15) rotate(12deg);
+            color: var(--black);
+          }
+
+          span {
+            display: inline-block;
+            margin-left: 6px;
+            padding: 2px 6px;
+            background-color: var(--white);
+            border-radius: 12rem;
+            transition: all 400ms;
+          }
         }
       }
+      
+    
     }
   }
 
-  section.category {
+  section.resource {
     padding: 50px 0;
-    .category-list {
+    .resource-list {
       width: auto;
       margin-left: -20px;
       margin-right: -20px;
@@ -374,7 +405,7 @@ const GlobalStyles = createGlobalStyle`
         margin-left: -14px;
         margin-right: -14px;
       }
-      .category-item {
+      .resource-item {
         padding: 20px;
         @media (max-width: 1000px) {
           padding: 16px;
@@ -388,6 +419,7 @@ const GlobalStyles = createGlobalStyle`
           
         }
         .single-item {
+          min-height: 210px;
           padding: 12px;
           border-radius: 2px;
           background-color: var(--white);
@@ -399,7 +431,6 @@ const GlobalStyles = createGlobalStyle`
           transition: all 200ms;
           &:hover {
             transform: translateY(-4px);
-            text-shadow: 0 0 6px rgb(0 0 0 / 30%);
           }
 
         
@@ -525,6 +556,11 @@ const GlobalStyles = createGlobalStyle`
         .item-body {
 
           p {
+            font-family: Lato,sans-serif;
+            letter-spacing: .5px;
+            -webkit-letter-spacing: .5px;
+            -moz-letter-spacing: .5px;
+            -ms-letter-spacing: .5px;
             font-size: 1.4rem;
             overflow: hidden;
             display: -webkit-box;
@@ -533,6 +569,19 @@ const GlobalStyles = createGlobalStyle`
           }
           .list-tag {
             display: block;
+            &::-webkit-scrollbar {
+            height: 6px;
+          }
+          &::-webkit-scrollbar-track {
+            background: var(--white);
+            
+          }
+          &::-webkit-scrollbar-thumb {
+            background-color: var(--beige) ;
+            border-radius: 2px;
+            height: 2px;
+            
+          }
             @media (max-width: 600px) {
                   margin-bottom: 20px !important;
               }
@@ -546,10 +595,11 @@ const GlobalStyles = createGlobalStyle`
                 display: inline-block;
                 font-size: 1.4rem;
                 
-                padding: 2px 6px;
-                border-radius: 2px;
+                padding: 6px 8px;
+                border-radius: 50px;
                 color: #87969d;
                 background-color: #f4f8fb;
+            
                 &.green {
                   color: #3e6c47;
                   background-color:#dbeede;
