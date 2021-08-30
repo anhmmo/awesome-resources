@@ -17,6 +17,7 @@ function countResourcesInCategory(resources) {
         acc[category._id] = {
           _id: category._id,
           name: category.name,
+          slug: category.slug.current,
           count: 1,
         }
       }
@@ -45,6 +46,9 @@ export default function CategoryFilter({ activeCategory }) {
             name
             _id
             desc
+            slug {
+              current
+            }
           }
         }
       }
@@ -54,7 +58,7 @@ export default function CategoryFilter({ activeCategory }) {
   const categoryWithCounts = countResourcesInCategory(resources.nodes)
   // Loop over the list of category and display the category and the count of resources in that category
   // Link it up.. ...  . . .
-  console.log(categoryWithCounts)
+  //console.log(categoryWithCounts)
   return (
     <ul className="list-topic">
       <Link to="/">
@@ -65,7 +69,7 @@ export default function CategoryFilter({ activeCategory }) {
         </li>
       </Link>
       {categoryWithCounts.map(category => (
-        <Link to={`/category/${category.name}`} key={category._id}>
+        <Link to={`/category/${category.slug}#resource`} key={category._id}>
           <li className={category.name === activeCategory ? "active" : ""}>
             {" "}
             {category.name}
