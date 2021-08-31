@@ -24,16 +24,16 @@ function SingleResource({ resource }) {
           alt="close button"
         />
 
-        <div className="preview-window" title="click to view bigger image">
+        {/* <div className="preview-window" title="click to view bigger image">
           <a
-            href="https://i.imgur.com/k8i8X9v.png"
+            href=""
             target="_blank"
             rel="noopener noreferrer"
           >
             {" "}
-            <img src="https://i.imgur.com/k8i8X9v.png" alt="preview" />
+            <img src="" alt="preview" />
           </a>
-        </div>
+        </div> */}
         <div className="item-header">
           <div className="image-box">
             <img
