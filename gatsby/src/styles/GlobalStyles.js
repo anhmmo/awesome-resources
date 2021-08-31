@@ -393,6 +393,7 @@ const GlobalStyles = createGlobalStyle`
 
   section.resource {
     padding: 50px 0;
+    /*box-shadow: -2px -2px 60px 20px #ececec;*/
     .resource-list {
       width: auto;
       margin-left: -20px;
