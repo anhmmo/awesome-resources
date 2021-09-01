@@ -19,10 +19,7 @@ export default function SEO({ children, location, description, title, image }) {
       <title>{title}</title>
       {/* Fav Icons */}
 
-      <link
-        rel="alternate icon"
-        href="https://www.sanity.io/manage-assets/sanity-favicon-120.png"
-      />
+      <link rel="alternate icon" href="" />
       {/* Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta charSet="utf-8" />
