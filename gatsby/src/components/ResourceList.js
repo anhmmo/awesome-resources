@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { useHorizontalScroll } from "../utils/useSideScroll"
 
 const getLink = link => {
   let newLink = ""
@@ -15,6 +16,7 @@ const getLink = link => {
 
 function SingleResource({ resource }) {
   let faviconLink = getLink(resource.link)
+  const scrollRef = useHorizontalScroll()
   return (
     <div className="flex-item three resource-item">
       <div className="single-item">
@@ -59,10 +61,7 @@ function SingleResource({ resource }) {
               }}
               alt="tag"
             />
-            <ul
-              className="list-tag"
-              style={{ whiteSpace: "nowrap", overflowX: "auto" }}
-            >
+            <ul ref={scrollRef} className="list-tag">
               {resource.category.map(item => {
                 return (
                   <Link
