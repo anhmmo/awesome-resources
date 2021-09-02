@@ -434,18 +434,6 @@ const GlobalStyles = createGlobalStyle`
             transform: translateY(-4px);
           }
 
-        
-
-          &::after {
-            content: " ";
-            display: block;
-            position: absolute;
-            top: -4px;
-            right: 0;
-            height: 8px;
-            width: 22px;
-          }
-
           .close-btn {
             display: none;
             position: absolute;
@@ -570,9 +558,11 @@ const GlobalStyles = createGlobalStyle`
           }
           .list-tag {
             display: block;
+            white-space: nowrap;
+            overflow-x: auto;
             &::-webkit-scrollbar {
-            height: 6px;
-          }
+              display: none;
+            }
           &::-webkit-scrollbar-track {
             background: var(--white);
             
