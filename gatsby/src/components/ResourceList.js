@@ -52,15 +52,8 @@ function SingleResource({ resource }) {
         <div className="item-body">
           {" "}
           <p title={resource.description}>{resource.description}</p>{" "}
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <img
-              src="https://i.imgur.com/vAUTnoW.png"
-              style={{
-                width: "20px",
-                marginRight: "10px",
-              }}
-              alt="tag"
-            />
+          <div className="tag-body">
+            <img src="https://i.imgur.com/vAUTnoW.png" alt="tag" />
             <ul ref={scrollRef} className="list-tag">
               {resource.category.map(item => {
                 return (
